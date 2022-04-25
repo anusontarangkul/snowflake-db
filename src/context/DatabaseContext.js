@@ -5,6 +5,7 @@ const Database = createContext()
 const DatabaseContext = ({ children }) => {
 
     const [openDB, setOpenDB] = useState([])
+    const [openSchema, setOpenSchema] = useState([])
 
     const data = [
         { name: 'TABLE_1', db_name: 'DEMO_DB', schema_name: 'PUBLIC', },
@@ -18,7 +19,7 @@ const DatabaseContext = ({ children }) => {
     // const [data, setData] = useState(data1)
 
     return (
-        <Database.Provider value={{ data, openDB, setOpenDB }}>
+        <Database.Provider value={{ data, openDB, setOpenDB, openSchema, setOpenSchema }}>
             {children}
         </Database.Provider>
     )

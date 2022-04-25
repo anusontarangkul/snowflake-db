@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Name.module.css';
 import { DatabaseState } from '../../context/DatabaseContext';
+import SchemaContainer from '../SchemaContainer/SchemaContainer';
 
 const Name = ({ db }) => {
   const { openDB, setOpenDB } = DatabaseState();
@@ -15,6 +16,7 @@ const Name = ({ db }) => {
   return (
     <div>
       <p onClick={handleClick}>{db}</p>
+      {openDB.includes(db) && <SchemaContainer db={db} />}
     </div>
   );
 };
