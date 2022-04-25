@@ -4,6 +4,8 @@ const Database = createContext()
 
 const DatabaseContext = ({ children }) => {
 
+    const [openDB, setOpenDB] = useState([])
+
     const data = [
         { name: 'TABLE_1', db_name: 'DEMO_DB', schema_name: 'PUBLIC', },
         { name: 'TABLE_2', db_name: 'DEMO_DB', schema_name: 'INFORMATION_SCHEMA', },
@@ -13,8 +15,10 @@ const DatabaseContext = ({ children }) => {
         { name: 'CATALOG_PAGE', db_name: 'SNOWFLAKE_SAMPLE_DATA', schema_name: 'TPCDS_SF100TCL', }
     ]
 
+    // const [data, setData] = useState(data1)
+
     return (
-        <Database.Provider value={data}>
+        <Database.Provider value={{ data, openDB, setOpenDB }}>
             {children}
         </Database.Provider>
     )
