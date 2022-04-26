@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NameContainer.module.css';
-import Name from '../DBName/DBName';
+import DBName from '../DBName/DBName';
 import { DatabaseState } from '../../context/DatabaseContext';
 
 const DBContainer = () => {
@@ -11,7 +11,7 @@ const DBContainer = () => {
   return (
     <div className={styles.nameContainer}>
       {uniqueDB.map((db, i) => {
-        return <Name db={db} key={i} openDB={openDB} />;
+        return <DBName db={db} key={i} openDB={openDB} />;
       })}
     </div>
   );

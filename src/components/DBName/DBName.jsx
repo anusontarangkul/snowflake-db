@@ -16,7 +16,7 @@ const DBName = ({ db }) => {
   return (
     <div>
       <div className='flex' onClick={handleClick}>
-        <img src={dbIcon} />
+        <img src={dbIcon} alt='dbIcon' />
         <p>{db}</p>
       </div>
       {openDB.includes(db) && <SchemaContainer db={db} />}

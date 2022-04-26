@@ -1,5 +1,7 @@
 # SnowFlake Database
 
+[Video](https://youtu.be/MZjx5rIQv18)
+
 A database application where the user can click on the database to view schemas. The user can click on the schemas to view tables. The user can also close what they are viewing by clicking on the parent folder.
 
 ![demo](./readme-assets/demo.gif)
