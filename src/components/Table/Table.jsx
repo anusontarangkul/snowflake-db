@@ -31,9 +31,9 @@ const Table = ({ schema }) => {
       {openTable &&
         findTables.map((table, i) => {
           return (
-            <div className='flex'>
+            <div key={i} className='flex'>
               <img src={tableIcon} />
-              <p key={i}>{table.name}</p>
+              <p>{table.name}</p>
             </div>
           );
         })}
