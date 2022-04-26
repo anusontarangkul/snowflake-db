@@ -16,8 +16,6 @@ const DatabaseContext = ({ children }) => {
         { name: 'CATALOG_PAGE', db_name: 'SNOWFLAKE_SAMPLE_DATA', schema_name: 'TPCDS_SF100TCL', }
     ]
 
-    // const [data, setData] = useState(data1)
-
     return (
         <Database.Provider value={{ data, openDB, setOpenDB, openSchema, setOpenSchema }}>
             {children}

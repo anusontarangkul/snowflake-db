@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './NameContainer.module.css';
-import Name from '../Name/Name';
+import Name from '../DBName/DBName';
 import { DatabaseState } from '../../context/DatabaseContext';
 
 const NameContainer = () => {

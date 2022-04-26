@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Name.module.css';
 import { DatabaseState } from '../../context/DatabaseContext';
 import SchemaContainer from '../SchemaContainer/SchemaContainer';
 import dbIcon from '../../icons/db.png';
@@ -16,7 +15,7 @@ const Name = ({ db }) => {
   };
   return (
     <div>
-      <div className={styles.flex} onClick={handleClick}>
+      <div className='flex' onClick={handleClick}>
         <img src={dbIcon} />
         <p>{db}</p>
       </div>

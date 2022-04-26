@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Container.module.css';
-import NameContainer from '../NameContainer/NameContainer.jsx';
+import DBContainer from '../DBContainer/DBContainer.jsx';
 
 const Container = () => {
   return (
@@ -8,7 +8,7 @@ const Container = () => {
       <h1 className={styles.title} data-testid='title'>
         SnowFlake Database
       </h1>
-      <NameContainer />
+      <DBContainer />
     </div>
   );
 };
