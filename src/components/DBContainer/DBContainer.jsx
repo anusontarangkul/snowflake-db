@@ -3,7 +3,7 @@ import styles from './NameContainer.module.css';
 import Name from '../DBName/DBName';
 import { DatabaseState } from '../../context/DatabaseContext';
 
-const NameContainer = () => {
+const DBContainer = () => {
   const { data, openDB } = DatabaseState();
 
   const uniqueDB = [...new Set(data.map((table) => table.db_name))];
@@ -17,4 +17,4 @@ const NameContainer = () => {
   );
 };
 
-export default NameContainer;
+export default DBContainer;

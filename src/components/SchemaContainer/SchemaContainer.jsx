@@ -3,7 +3,7 @@ import { DatabaseState } from '../../context/DatabaseContext';
 import SchemaName from '../SchemaName/SchemaName';
 
 const SchemaContainer = ({ db }) => {
-  const { openSchema, setOpenSchema, data } = DatabaseState();
+  const { data } = DatabaseState();
 
   const schemaFromDB = [
     ...new Set(

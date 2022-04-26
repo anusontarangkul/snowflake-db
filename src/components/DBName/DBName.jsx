@@ -3,7 +3,7 @@ import { DatabaseState } from '../../context/DatabaseContext';
 import SchemaContainer from '../SchemaContainer/SchemaContainer';
 import dbIcon from '../../icons/db.png';
 
-const Name = ({ db }) => {
+const DBName = ({ db }) => {
   const { openDB, setOpenDB } = DatabaseState();
   const handleClick = (e) => {
     const clickedDB = e.target.textContent;
@@ -24,4 +24,4 @@ const Name = ({ db }) => {
   );
 };
 
-export default Name;
+export default DBName;
