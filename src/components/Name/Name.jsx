@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Name.module.css';
 import { DatabaseState } from '../../context/DatabaseContext';
 import SchemaContainer from '../SchemaContainer/SchemaContainer';
+import dbIcon from '../../icons/db.png';
 
 const Name = ({ db }) => {
   const { openDB, setOpenDB } = DatabaseState();
@@ -15,7 +16,10 @@ const Name = ({ db }) => {
   };
   return (
     <div>
-      <p onClick={handleClick}>{db}</p>
+      <div className={styles.flex}>
+        <img src={dbIcon} />
+        <p onClick={handleClick}>{db}</p>
+      </div>
       {openDB.includes(db) && <SchemaContainer db={db} />}
     </div>
   );
