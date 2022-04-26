@@ -19,7 +19,7 @@ const SchemaContainer = ({ db }) => {
   );
 
   return (
-    <div>
+    <div className='inner-container'>
       {uniqueSchema.map((schema, i) => {
         return <SchemaName schema={schema} key={i} />;
       })}

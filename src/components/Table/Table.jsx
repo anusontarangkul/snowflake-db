@@ -19,7 +19,7 @@ const Table = ({ schema }) => {
     setOpenTable(!openTable);
   };
   return (
-    <>
+    <div className='inner-container'>
       <div className='flex'>
         {openTable ? (
           <img className='triangle' src={downArrow} alt='down arrow' />
@@ -37,7 +37,7 @@ const Table = ({ schema }) => {
             </div>
           );
         })}
-    </>
+    </div>
   );
 };
 
