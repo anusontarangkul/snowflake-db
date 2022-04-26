@@ -20,13 +20,13 @@ const Table = ({ schema }) => {
   };
   return (
     <div className='inner-container'>
-      <div className='flex'>
+      <div className='flex' onClick={handleClick}>
         {openTable ? (
           <img className='triangle' src={downArrow} alt='down arrow' />
         ) : (
           <img className='triangle' src={rightArrow} alt='right arrow' />
         )}
-        <p onClick={handleClick}>Table</p>
+        <p>Table</p>
       </div>
       {openTable &&
         findTables.map((table, i) => {

@@ -9,9 +9,9 @@ const SchemaName = ({ schema }) => {
   };
   return (
     <>
-      <div className='flex'>
+      <div className='flex' onClick={handleClick}>
         <img src={schemaIcon} alt='schema icon' />
-        <p onClick={handleClick}>{schema.schema_name}</p>
+        <p>{schema.schema_name}</p>
       </div>
       {table && <Table schema={schema} />}
     </>
